@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MyAPP
+{
+    public interface ICalculator
+    {
+        int Add(int num, int addNum);
+        int Subtract(int num, int subNum);
+        int Multiply(int num, int mulNum);
+        int Divide(int num, int nivNum); // 除數為 0 時應拋出例外
+    }
+
+    public class Calculator : ICalculator
+    {
+        public int Add(int num, int addNum)
+        {
+            return num + addNum;
+        }
+
+        public int Divide(int num, int nivNum)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Multiply(int num, int mulNum)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Subtract(int num, int subNum)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
