@@ -18,22 +18,50 @@ namespace MyAPP
     {
         public int Add(int num, int addNum)
         {
-            return num + addNum;
-        }
-
-        public int Divide(int num, int nivNum)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int Multiply(int num, int mulNum)
-        {
-            throw new NotImplementedException();
+            try
+            {
+                return checked(num + addNum);
+            }
+            catch (Exception)
+            {
+                throw;
+            }        
         }
 
         public int Subtract(int num, int subNum)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return checked(num - subNum);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public int Multiply(int num, int mulNum)
+        {
+            try
+            {
+                return checked(num * mulNum);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public int Divide(int num, int divNum)
+        {
+            try
+            {
+                return checked(num / divNum);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
